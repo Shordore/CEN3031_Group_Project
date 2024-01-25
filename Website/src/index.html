@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <title>Welcome! Login</title>
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+
+        function Header() {
+          return(
+            <div class="header">
+                    <h1>CEN3031 Group Project</h1>
+                </div>
+          )
+        }
+
+        function Navbar() {
+          return(
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact us</a></li>
+                </ul>
+            </div>
+          )
+        }
+
+        function Input(){
+          return(
+            <div class="input">
+              Username:
+             <input type="username" id="username" name="username" placeholder="JSmith@ufl.edu" />
+              <br />
+              <br />
+              <br/>
+              Password:
+              <input type="password" id="password" name="password" placeholder="EliteCoder54!" />
+              </div>
+          )
+        }
+
+        function Button(){
+          return(
+            <div class="button">
+              <button type="button" onclick="alert('Welcome!')">Login</button>
+            </div>
+          )
+        }
+
+        function Footer(){
+          return(
+            <div class="footer">
+              <footer>
+                <p>2024 Copyright. All rights reserved.</p>
+              </footer>
+            </div>
+          )
+        }
+
+        function App() {
+            return (
+                <div>
+                <Header />
+                <Navbar />
+                <Input />
+                <Button />
+                <Footer />
+                </div>
+            )
+        }
+
+        ReactDOM.render(
+        <App />,
+        document.getElementById("root")
+      );
